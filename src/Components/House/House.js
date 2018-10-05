@@ -4,7 +4,7 @@ export default function House(props){
     console.log(props.home);
     return(
         <div>
-            <button>Delete House</button>
+            <button onClick={props.delete}>Delete House</button>
                 <h3>A Home!</h3>
                 <p>{props.home.name}</p>
                 <p>{props.home.address}</p>

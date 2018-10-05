@@ -27,7 +27,7 @@ module.exports={
         const db=req.app.get('db')
 
         db.delete_house([id])
-        .then(()=>res.status(200))
+        .then((houses)=>res.status(200).send(houses))
         .catch(err=>{
             res.status(500).send({errorMessage:`Could not delete a house`})
             console.log(err)
