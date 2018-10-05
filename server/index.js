@@ -16,6 +16,9 @@ massive(process.env.CONNECTION_STRING)
 
 
 app.get('/api/houses',ctrl.getHouses);
+app.post('/api/houses',ctrl.addHouse);
+app.delete('/api/houses/:id',ctrl.deleteHouse);
+app.put('/api/houses/:id',ctrl.updateHouse);
 
 
 const port = process.env.PORT;
